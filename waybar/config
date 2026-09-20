@@ -1,0 +1,61 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "margin-top": 8,
+    "margin-left": 12,
+    "margin-right": 12,
+    "spacing": 8,
+
+    "modules-left": ["custom/launcher", "custom/datetime"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["pulseaudio", "network", "custom/notifications", "custom/power"],
+
+    "custom/launcher": {
+        "format": "Apps",
+        "on-click": "hyprlauncher",
+        "tooltip": false
+    },
+
+    "custom/datetime": {
+        "exec": "~/.config/waybar/scripts/datetime.sh",
+        "interval": 30,
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
+        }
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "\uf026 muted",
+        "format-icons": { "default": ["\uf026", "\uf027", "\uf028"] },
+        "on-click": "pavucontrol"
+    },
+
+    "network": {
+        "format-wifi": "\uf1eb  {signalStrength}%",
+        "format-ethernet": "\uf0e8",
+        "format-disconnected": "\uf071",
+        "tooltip-format": "{ifname}: {ipaddr}"
+    },
+
+    "custom/notifications": {
+        "format": "\uf0f3",
+        "on-click": "dunstctl history-pop",
+        "on-click-right": "dunstctl close-all",
+        "tooltip-format": "Left click: show last, right click: clear all"
+    },
+
+    "custom/power": {
+        "format": "\uf011",
+        "on-click": "wlogout",
+        "tooltip": false
+    }
+}

@@ -1,0 +1,43 @@
+# Official repo packages. Lines starting with # are ignored.
+
+# Build tools and basics
+base-devel
+git
+curl
+unzip
+
+# Hyprland and Wayland plumbing
+hyprland
+hyprpaper
+hyprpolkitagent
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+qt5-wayland
+qt6-wayland
+
+# Audio
+pipewire
+pipewire-pulse
+wireplumber
+pavucontrol
+playerctl
+
+# Desktop apps and bar
+kitty
+waybar
+dunst
+rofi
+dolphin
+ranger
+python-pillow
+blueman
+bluez
+bluez-utils
+brightnessctl
+
+# Shell
+zsh
+
+# Fonts
+ttf-jetbrains-mono-nerd
+ttf-font-awesome

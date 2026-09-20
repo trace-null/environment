@@ -1,0 +1,4 @@
+# Tried from the official repos first, then the AUR via yay.
+# Lines starting with # are ignored.
+hyprlauncher
+wlogout
